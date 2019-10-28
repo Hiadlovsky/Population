@@ -67,7 +67,7 @@ import axios from 'axios';
       </form>
       <hr>
       <template v-if="display">
-        <p>You have {{userData.remainingLifeExpectancy}} years to live.</p>
+        <p class="font-weight-bold">You have <span class="text-danger">{{userData.remainingLifeExpectancy}}</span> years to live.</p>
       </template>
 
   </div>

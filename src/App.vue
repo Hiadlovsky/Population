@@ -38,7 +38,18 @@
 
       </div>
     </div>
-
+	<div>
+		<footer class="app-footer px-1">
+  <div>
+    <a href="https://www.linkedin.com/in/pavol-hiadlovsky-154966184/">Pavol Hiadlovsky</a>
+    <span>&copy; 2019 Hiadlovsky.</span>
+  </div>
+  <div class="ml-auto">
+    <span>Created in</span>
+    <a href="https://vuejs.org">Vue.js</a>
+  </div>
+</footer>
+	</div>
 
   </div>
 </template>
@@ -62,7 +73,9 @@
 				  loaded: false,
 				  agesRange: {},
 				  minAge:18,
-				  maxAge:30
+				  maxAge:30,
+				  selectedCountry:'Slovak',
+				  selectedYear: 1990
 
 			  }
 		  }
@@ -100,5 +113,19 @@
 </script>
 
 <style lang="scss">
+.app-footer{ 
+	background-color: #009879;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.app-footer a {
+	color:#000000;
+}
+
+.app-footer a:hover{
+	text-decoration: none;
+	color: #9E4634;
+}
 
 </style>

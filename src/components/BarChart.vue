@@ -2,8 +2,8 @@
   <div class="card-body">
     <div class="row">
       <div class="col-sm-12 text-center">
-        <div class="alert alert-info">
-          Slovak population Bar Chart in the year 1990.
+        <div class="alert alert-info shadow-lg">
+          {{data.selectedCountry}} population table in the year {{data.selectedYear}}..
           <canvas ref="canvas" id="bar-chart" width="1900" height="400"></canvas>
         </div>
       </div>
