@@ -66,19 +66,20 @@
 	  },
 	  // Using created to see if axios works.
 		created() {
-			for (let age = 18; age < 31; age++) {
+			for (let age = 18; age <= 30; age++) {
 				this.data.ages.push(age);
 			}
 		},
 		mounted() {
 			axios.get(`https://d6wn6bmjj722w.cloudfront.net:443/1.0/population/1990/Slovak%20Republic`)
 				.then(res => {
-					for (let age in this.data.ages) {
-						if (res.data.hasOwnProperty(this.data.ages[age])) {
-							let temp = res.data[this.data.ages[age]]; // --> stored all data in let to delete things that i dont neade
+					for (let index in this.data.ages) {
+						let age = this.data.ages[index];
+						if (res.data.hasOwnProperty(age)) {
+							let temp = res.data[age]; // --> stored all data in let to delete things that i dont neade
 							delete temp.country;  // --> deleting data athet we dont neade
 							delete temp.year;    // --> deleting data athet we dont neade
-							this.data.agesFrom18To30[this.data.ages[age]] = temp;  // --> dynamic creation of key
+							this.data.agesFrom18To30[age] = temp;  // --> dynamic creation of key
 						}
 					}
 					this.data.loaded = true;
