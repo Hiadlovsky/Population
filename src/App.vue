@@ -90,7 +90,7 @@
 				axios.get('https://d6wn6bmjj722w.cloudfront.net:443/1.0/population/1990/Slovak%20Republic/18/')
 					.then(res => console.log(res))
 					.catch(error => console.log(error));
-			},
+			}
 		}
 	}
 </script>
