@@ -5,7 +5,6 @@ import axios from 'axios';
       <form>
         <div class="row">
           <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 form-group">
-            <h1>Calculator</h1>
             <label for="male">
               <input
                 name="sex"
@@ -57,7 +56,7 @@ import axios from 'axios';
               id="country"
               name="country"
               v-model="userData.country">
-              <option v-for="country in countryes" :selected="country === 'Afganistan'" :key="country"> {{ country }}
+              <option v-for="country in countries" :selected="country === 'Afganistan'" :key="country"> {{ country }}
               </option>
             </select>
           </div>
@@ -68,7 +67,7 @@ import axios from 'axios';
       </form>
       <hr>
       <template v-if="display">
-        <p>Yu have {{userData.remainingLifeExpectancy}} years to live.</p>
+        <p>You have {{userData.remainingLifeExpectancy}} years to live.</p>
       </template>
 
   </div>
@@ -117,7 +116,7 @@ import axios from 'axios';
 		},
 		methods: {
 			getLifeExpectancy() {
-				axios.get(`https://d6wn6bmjj722w.cloudfront.net:443/1.0/life-expectancy/remaining/${this.userData.sex}/${this.userData.country}/${this.userData.date}/${this.userData.age}'y'/`)
+        axios.get(`https://d6wn6bmjj722w.cloudfront.net:443/1.0/life-expectancy/remaining/${this.userData.sex}/${this.userData.country}/${this.userData.date}/${this.userData.age+'y'}/`)
 					.then(res => {
 						let temp = res.data.remaining_life_expectancy;
 						temp = Math.round(temp * 100) / 100;

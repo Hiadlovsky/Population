@@ -60,13 +60,16 @@
 			  data: {
 				  ages: [],
 				  loaded: false,
-				  agesFrom18To30: {}
+				  agesRange: {},
+				  minAge:18,
+				  maxAge:30
+
 			  }
 		  }
 	  },
 	  // Using created to see if axios works.
 		created() {
-			for (let age = 18; age <= 30; age++) {
+			for (let age = this.data.minAge; age <= this.data.maxAge; age++) {
 				this.data.ages.push(age);
 			}
 		},
@@ -79,7 +82,7 @@
 							let temp = res.data[age]; // --> stored all data in let to delete things that i dont neade
 							delete temp.country;  // --> deleting data athet we dont neade
 							delete temp.year;    // --> deleting data athet we dont neade
-							this.data.agesFrom18To30[age] = temp;  // --> dynamic creation of key
+							this.data.agesRange[age] = temp;  // --> dynamic creation of key
 						}
 					}
 					this.data.loaded = true;

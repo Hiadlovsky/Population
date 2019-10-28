@@ -3,7 +3,7 @@
     <div class="row">
       <div class="col-sm-12 text-center">
         <div class="alert alert-info">
-          Slovakia population Bar Chart in year 1990 will it work ?
+          Slovak population Bar Chart in the year 1990.
           <canvas ref="canvas" id="bar-chart" width="1900" height="400"></canvas>
         </div>
       </div>
@@ -44,21 +44,21 @@
 			for (let index in this.data.ages) {
 				if (this.data.ages.hasOwnProperty(index)) {
 					let age = this.data.ages[index];
-					datasets.male.push(this.data.agesFrom18To30[age].males);
-					datasets.female.push(this.data.agesFrom18To30[age].females);
-					datasets.total.push(this.data.agesFrom18To30[age].total);
+					datasets.male.push(this.data.agesRange[age].males);
+					datasets.female.push(this.data.agesRange[age].females);
+					datasets.total.push(this.data.agesRange[age].total);
 				}
 			}
 			this.renderChart({
 					labels: this.data.ages,
 					datasets: [
 						{
-							label: 'Male',
+							label: 'Males',
 							backgroundColor: '#6789f8',
 							data: datasets.male
 						},
 						{
-							label: 'Female',
+							label: 'Females',
 							backgroundColor: '#f81418',
 							data: datasets.female
 						},

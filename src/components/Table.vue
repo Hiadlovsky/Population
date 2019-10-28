@@ -3,7 +3,7 @@
     <div class="row">
       <div class="col-sm-12 text-center">
         <div class="alert alert-info">
-          Slovakia population table in year 1990 0
+          Slovak population table in the year 1990.
         </div>
         <table class="col-sm-12 text-center contend_table" v-if="data.loaded">
           <thead>
@@ -15,7 +15,7 @@
           </tr>
           </thead>
           <tbody>
-          <tr v-for="value in data.agesFrom18To30">
+          <tr v-for="value in data.agesRange">
             <td>{{value.age}}</td>
             <td>{{value.males}}</td>
             <td>{{value.females}}</td>
