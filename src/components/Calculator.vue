@@ -80,7 +80,7 @@ import axios from 'axios';
 		created() {
 			let today = new Date();
 			let dd = today.getDate();
-			let mm = today.getMonth() + 1; //January is 0!
+			let mm = today.getMonth() + 1; 
 			let yyyy = today.getFullYear();
 
 			if (dd < 10) {
@@ -107,7 +107,7 @@ import axios from 'axios';
 				countries: [],
 				userData: {
 					sex: '',
-					country: '', //* if space must add %20
+					country: '',
 					date: '',
 					age: null,
 					remainingLifeExpectancy: ''

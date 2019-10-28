@@ -80,7 +80,6 @@
 			  }
 		  }
 	  },
-	  // Using created to see if axios works.
 		created() {
 			for (let age = this.data.minAge; age <= this.data.maxAge; age++) {
 				this.data.ages.push(age);
@@ -92,10 +91,10 @@
 					for (let index in this.data.ages) {
 						let age = this.data.ages[index];
 						if (res.data.hasOwnProperty(age)) {
-							let temp = res.data[age]; // --> stored all data in let to delete things that i dont neade
-							delete temp.country;  // --> deleting data athet we dont neade
-							delete temp.year;    // --> deleting data athet we dont neade
-							this.data.agesRange[age] = temp;  // --> dynamic creation of key
+							let temp = res.data[age]; 
+							delete temp.country; 
+							delete temp.year;   
+							this.data.agesRange[age] = temp; 
 						}
 					}
 					this.data.loaded = true;
