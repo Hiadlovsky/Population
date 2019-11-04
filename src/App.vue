@@ -101,13 +101,6 @@
 				})
 				.catch(error => console.log(error));
 		},
-		methods: {
-			getDataFromAPI() {
-				axios.get('https://d6wn6bmjj722w.cloudfront.net:443/1.0/population/1990/Slovak%20Republic/18/')
-					.then(res => console.log(res))
-					.catch(error => console.log(error));
-			}
-		}
 	}
 </script>
 
@@ -125,6 +118,16 @@
 .app-footer a:hover{
 	text-decoration: none;
 	color: #9E4634;
+}
+
+#calculator{
+	 background-image: url('./images/old_age_tesie.jpg');
+  background-repeat: no-repeat;
+  -webkit-background-size:cover;
+  -moz-background-size:cover;
+  -o-background-size:cover;
+  background-size: cover;
+	
 }
 
 </style>
