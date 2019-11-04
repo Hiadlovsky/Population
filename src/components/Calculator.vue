@@ -27,7 +27,7 @@ import axios from 'axios';
         <div class="row">
           <div class="col-xs-12 col-sm-12 col-sm-offset-2 col-md-12 col-md-offset-3">
             <div class="form-group">
-              <label for="date">Date (please use format yyyy-mm-dd)</label>
+              <label for="date" class="title">Date (please use format yyyy-mm-dd)</label>
               <input type="text"
                      id="date"
                      name="date"
@@ -35,7 +35,7 @@ import axios from 'axios';
                      v-model="userData.date">
             </div>
             <div class="form-group">
-              <label for="age">Age</label>
+              <label for="age" class="title">Age</label>
               <input type="number"
                      min="0"
                      max="100"
@@ -51,7 +51,7 @@ import axios from 'axios';
 
         <div class="row">
           <div class="col-xs-6 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 from-group">
-            <label for="country">Country</label>
+            <label for="country" class="title">Country</label>
             <select
               class="form-control"
               id="country"
@@ -68,7 +68,7 @@ import axios from 'axios';
       </form>
       <div class="col-6 d-flex align-items-center justify-content-center">
         <div class="text__font">
-          <p id="qoute">You can't help getting older, but you don't have to get old</p>
+          <p id="qoute">You can't help getting older, but you don't have to get old.</p>
           <p>-George Burns</p>
         </div>
       </div>
@@ -153,16 +153,20 @@ import axios from 'axios';
 }
 
 #qoute{
+  font-size: 40px;
   &::before {
   content: '"' ;
   color: rgba(255, 153, 0, 0.795);
-  font-size: 40px;
   }
   &::after {
   content: '"' ;
   color: rgba(255, 153, 0, 0.795);
-  font-size: 40px;
   }
+}
+
+.title{
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bolder;
 }
 
 </style>
